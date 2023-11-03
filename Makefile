@@ -6,13 +6,14 @@
 #    By: pausanch <pausanch@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/01 16:48:41 by pausanch          #+#    #+#              #
-#    Updated: 2023/11/03 15:40:17 by pausanch         ###   ########.fr        #
+#    Updated: 2023/11/03 15:58:42 by pausanch         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= so_long
 
 SOURCE	=	draw.c \
+			exit_game.c \
 			game.c \
 			init.c \
 			map_validate.c \
@@ -59,7 +60,6 @@ libclean:
 		@make -C ./libft clean
 
 fclean:	clean
-		echo ${OBJS}
 		@rm -rf ${NAME}
 
 re:	clean all
