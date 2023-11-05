@@ -17,6 +17,9 @@
 # include "../MLX/mlx.h"
 # include <stdio.h>
 # include <fcntl.h>
+# include <time.h>
+# include <stdlib.h>
+# include <stdbool.h>
 
 # define KEY_ESC 65307
 # define KEY_Q 113
@@ -66,5 +69,6 @@ void	player_a(t_game *game);
 void	player_d(t_game *game);
 int		exit_game(t_game *game);
 void	free_map(char **map);
+void	wall_texture(t_game *game, int x, int y);
 
 #endif

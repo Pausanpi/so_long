@@ -19,7 +19,8 @@ SOURCE	=	draw.c \
 			map_validate.c \
 			player_update.c \
 			read_map.c \
-			so_long.c
+			so_long.c \
+			wall_texture.c
 
 OBJS	= $(addsuffix .o, $(notdir $(basename $(SOURCE))))
 #OBJS	= ${SOURCE:.c=.o}

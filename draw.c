@@ -48,6 +48,7 @@ int	map_draw(t_game *game)
 		{
 			if (game->map[y][x] == '1')
 				img_draw(game, game->img_wall, x, y);
+				//wall_texture(game, x, y);
 			else if (game->map[y][x] == '0')
 				img_draw(game, game->img_floor, x, y);
 			else if (game->map[y][x] == 'P')
