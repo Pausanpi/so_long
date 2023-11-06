@@ -1,12 +1,10 @@
 # so_long
 
 <pre>
-  ```
 .
 |
-- MLX/
+├─ MLX/
 |
-- include/
-  
-  ```
+├─ include/
+    └── so_long.h
 </pre>
