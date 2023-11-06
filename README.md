@@ -4,7 +4,7 @@
 .
 |
 ├─ MLX/
-|
 ├─ include/
-    └── so_long.h
+|  └── so_long.h
+
 </pre>
