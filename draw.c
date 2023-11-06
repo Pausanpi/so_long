@@ -6,7 +6,7 @@
 /*   By: pausanch <pausanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 10:44:05 by pausanch          #+#    #+#             */
-/*   Updated: 2023/11/03 15:37:03 by pausanch         ###   ########.fr       */
+/*   Updated: 2023/11/06 16:48:14 by pausanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ static void	exit_draw(t_game *game, int x, int y)
 	{
 		mlx_destroy_image(game->mlx, game->img_exit);
 		game->img_exit = mlx_xpm_file_to_image(game->mlx,
-				"Sprites/exit2.xpm", &game->img_w, &game->img_h);
+				"Sprites/exit1.xpm", &game->img_w, &game->img_h);
 	}
 	img_draw(game, game->img_exit, x, y);
 }

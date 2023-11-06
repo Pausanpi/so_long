@@ -15,15 +15,27 @@
 static void	img_init(t_game *game)
 {
 	game->img_floor = mlx_xpm_file_to_image(game->mlx,
-			"sprites/floor.xpm", &game->img_w, &game->img_h);
-	game->img_wall = mlx_xpm_file_to_image(game->mlx, "sprites/wall.xpm",
+			"Sprites/floor.xpm", &game->img_w, &game->img_h);
+	game->img_wall = mlx_xpm_file_to_image(game->mlx, "Sprites/wall.xpm",
 			&game->img_w, &game->img_h);
 	game->img_player = mlx_xpm_file_to_image(game->mlx,
-			"sprites/character_down.xpm", &game->img_w, &game->img_h);
+			"Sprites/character_down.xpm", &game->img_w, &game->img_h);
 	game->img_colect = mlx_xpm_file_to_image(game->mlx,
-			"sprites/collectible.xpm", &game->img_w, &game->img_h);
+			"Sprites/collectible.xpm", &game->img_w, &game->img_h);
 	game->img_exit = mlx_xpm_file_to_image(game->mlx,
-			"sprites/exit1.xpm", &game->img_w, &game->img_h);
+			"Sprites/exit2.xpm", &game->img_w, &game->img_h);
+	game->img_ambar = mlx_xpm_file_to_image(game->mlx,
+			"Sprites/ambar.xpm", &game->img_w, &game->img_h);
+	game->img_caracola = mlx_xpm_file_to_image(game->mlx,
+			"Sprites/caracola.xpm", &game->img_w, &game->img_h);
+	game->img_crystal = mlx_xpm_file_to_image(game->mlx,
+			"Sprites/crystal.xpm", &game->img_w, &game->img_h);
+	game->img_thing = mlx_xpm_file_to_image(game->mlx,
+			"Sprites/thing.xpm", &game->img_w, &game->img_h);
+	game->img_thing2 = mlx_xpm_file_to_image(game->mlx,
+			"Sprites/thing2.xpm", &game->img_w, &game->img_h);
+	game->img_full = mlx_xpm_file_to_image(game->mlx,
+			"Sprites/thing.xpm", &game->img_w, &game->img_h);
 }
 
 static void	size_window_init(t_game *game)
@@ -32,7 +44,6 @@ static void	size_window_init(t_game *game)
 
 	game->map_w = ft_strlen(game->map[0]) * 32;
 	i = 0;
-	//while (game->map[i] != '\0')
 	while (game->map[i] != (void *)0)
 		i++;
 	game->map_h = i * 32;

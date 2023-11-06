@@ -6,7 +6,7 @@
 #    By: pausanch <pausanch@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/01 16:48:41 by pausanch          #+#    #+#              #
-#    Updated: 2023/11/03 15:58:42 by pausanch         ###   ########.fr        #
+#    Updated: 2023/11/06 14:56:06 by pausanch         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,6 @@ SOURCE	=	draw.c \
 			wall_texture.c
 
 OBJS	= $(addsuffix .o, $(notdir $(basename $(SOURCE))))
-#OBJS	= ${SOURCE:.c=.o}
 
 CFLAGS	= -Wall -Werror -Wextra -Imlx -c
 
@@ -32,9 +31,7 @@ MLX		= ./MLX/libmlx.a
 LIBFT	= ./libft/libft.a
 
 
-all:	bonus
-
-bonus:	$(NAME)
+all:	$(NAME)
 
 $(NAME):	$(OBJS) $(MLX) $(LIBFT)
 		gcc $(OBJS) -Llibft -lft -LMLX -lmlx -framework OpenGL -framework AppKit -o $(NAME)
@@ -53,15 +50,16 @@ $(LIBFT):
 		@echo "Objetos objetacionados"
 
 clean:
-		@rm -rf $(OBJS)
+		@rm -rf $(OBJS) $(MLX) $(LIBFT)
+		@make -C ./libft clean
 		@echo "Limpiando todo..."
 
 libclean:
 		@make -C ./mlx clean
-		@make -C ./libft clean
+		@make -C ./libft fclean
 
 fclean:	clean
-		@rm -rf ${NAME}
+		@rm -rf $(NAME)
 
 re:	clean all
 

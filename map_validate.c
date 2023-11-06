@@ -19,11 +19,13 @@ static int	is_rectangular(char **map)
 	if (!map)
 		return (0);
 	i = 1;
-	//while (map[i] != '\0')
 	while (map[i] != (void *)0)
 	{
 		if (ft_strlen(map[i]) != ft_strlen(map[0]))
+		{
+			ft_printf("Error, el mapa no es rectangular!\n");
 			return (0);
+		}
 		i++;
 	}
 	return (1);
@@ -37,22 +39,20 @@ static int	is_wall(char **map)
 
 	j = 0;
 	i = 0;
-	//while (map[i] != '\0')
 	while (map[i] != (void *)0)
 		i++;
 	while (map[0][j] != '\0' && map[i - 1][j] != '\0')
 	{
 		if (map[0][j] != '1' || map[i - 1][j] != '1')
-			return (0);
+			return (ft_printf("Error, no todo es muro!\n"), 0);
 		j++;
 	}
 	i = 1;
 	len = ft_strlen(map[i]);
-	//while (map[i] != '\0')
 	while (map[i] != (void *)0)
 	{
 		if (map[i][0] != '1' || map[i][len - 1] != '1')
-			return (0);
+			return (ft_printf("Error, no todo es muro!\n"), 0);
 		i++;
 	}
 	return (1);
@@ -67,7 +67,6 @@ static int	is_pec(t_game *game)
 	game->n_player = 0;
 	game->n_exit = 0;
 	i = 0;
-	//while (game->map[i] != '\0')
 	while (game->map[i] != (void *)0)
 	{
 		j = 0;
@@ -81,9 +80,10 @@ static int	is_pec(t_game *game)
 				game->n_colect++;
 			j++;
 		}
+		i++;
 	}
 	if (game->n_player != 1 || game->n_exit == 0 || game->n_colect == 0)
-		return (0);
+		return (ft_printf("Error, le falta un elemento!\n"), 0);
 	return (1);
 }
 
@@ -93,7 +93,6 @@ static int	is_validate(char **map)
 	int	j;
 
 	i = 0;
-	//while (map[i] != '\0')
 	while (map[i] != (void *)0)
 	{
 		j = 0;
@@ -101,7 +100,7 @@ static int	is_validate(char **map)
 		{
 			if (map[i][j] != 'P' && map[i][j] != 'E' && map[i][j] != 'C'
 				&& map[i][j] != '0' && map[i][j] != '1')
-				return (0);
+				return (ft_printf("Error, tiene algún elemento que no debería!\n"), 0);
 			j++;
 		}
 		i++;

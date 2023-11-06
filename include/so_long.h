@@ -17,22 +17,20 @@
 # include "../MLX/mlx.h"
 # include <stdio.h>
 # include <fcntl.h>
-# include <time.h>
-# include <stdlib.h>
 # include <stdbool.h>
 
-# define KEY_ESC 65307
-# define KEY_Q 113
+# define KEY_ESC 53
+# define KEY_Q 12
 
-# define KEY_W 119
-# define KEY_A 97
-# define KEY_S 115
-# define KEY_D 100
+# define KEY_W 13
+# define KEY_A 0
+# define KEY_S 1
+# define KEY_D 2
 
-# define KEY_UP 65362
-# define KEY_LEFT 65261
-# define KEY_DOWN 65364
-# define KEY_RIGHT 65363
+# define KEY_UP 126
+# define KEY_LEFT 123
+# define KEY_DOWN 125
+# define KEY_RIGHT 124
 
 typedef struct s_game
 {
@@ -44,6 +42,12 @@ typedef struct s_game
 	void	*img_player;
 	void	*img_colect;
 	void	*img_exit;
+	void	*img_ambar;
+	void	*img_caracola;
+	void	*img_crystal;
+	void	*img_thing;
+	void	*img_thing2;
+	void	*img_full;
 	int		map_w;
 	int		map_h;
 	int		img_w;

@@ -44,7 +44,7 @@ int	main(int argc, char **argv)
 	}
 	else
 	{
-		//ft_printf("Error\nInvalid Syntax");
+		ft_printf("Error\nInvalid Syntax");
 		exit(1);
 	}
 	return (0);
