@@ -59,8 +59,11 @@ typedef struct s_game
 	int		y_player;
 	int		moves;
 	int		endgame;
+	int		time;
+	int		pos_colect;
 }	t_game;
 
+int		animation(t_game game);
 void	img_draw(t_game *game, void *image, int x, int y);
 int		map_draw(t_game *game);
 void	game_init(t_game *game);
