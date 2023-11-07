@@ -13,6 +13,7 @@
 NAME	= so_long
 
 SOURCE	=	draw.c \
+			animation.c \
 			exit_game.c \
 			game.c \
 			init.c \
