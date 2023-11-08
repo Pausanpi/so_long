@@ -5,7 +5,7 @@ int animation(t_game *game)
 	while(game->time < 1000)
 		game->time++;
 	game->time = 0;
-	mlx_destroy_image(game->mlx, game->colect);
+	mlx_destroy_image(game->mlx, game->img_colect);
 	if (game->pos_colect == 1)
 		game->img_colect = mlx_xpm_file_to_image(game->mlx,
 				"Primera imagen", &game->img_w, &game->img_h);
