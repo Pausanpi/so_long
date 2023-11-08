@@ -1,6 +1,6 @@
 #include "include/so_long.h"
 
-int animation(t_game game)
+int animation(t_game *game)
 {
 	while(game->time < 1000)
 		game->time++;
