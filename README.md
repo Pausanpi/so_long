@@ -21,3 +21,5 @@
 ├─ so_long.c
 └─ wall_texture.c
 </pre>
+
+![gif](./gif/gif1.gif)
