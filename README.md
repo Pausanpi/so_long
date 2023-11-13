@@ -23,3 +23,14 @@
 </pre>
 
 ![gif](./gif/gif1.gif)
+
+## Introduction
+In this project, we'll code a simple 2D game to get familiar rwith mlx library and UI in general.
+
+## Controls
+Arrow keys or:
+* w - up
+* s - down
+* a - left
+* d - right
+  
