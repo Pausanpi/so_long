@@ -7,10 +7,13 @@
 ├─ include/
 |  └─ so_long.h
 ├─ libft/
-|
+|  └─ get_next_line/
+|  └─ printf/
+|  └─ ...
 ├─ maps/
 |
 ├─ Makefile
+├─ animation.c
 ├─ draw.c
 ├─ exit_game.c
 ├─ game.c
