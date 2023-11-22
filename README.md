@@ -63,3 +63,15 @@ Map handling
 * Manage the creation of the window
 * Manage the hooks so that ESC, Q and the red cross of the window close it
 * Manage that closing the window stops the program cleanly
+
+### Image management
+* Choose the theme and sprites to use
+* Transfer the images to .xpm
+* Load the images in memory
+* Load the images in the window
+
+### In-game events
+* A loop-handler that opens and manages the loop in which the game takes place
+* Manage the hooks so that the character can move with the W, A, S, D and ←, ↑, →, ↓ keys
+* Redo the map with each movement of the player, updating the player's position, and making the collectibles disappear if he retakes them
+* Manage the movement count (which should be displayed on the screen) and the count of collected collectibles
