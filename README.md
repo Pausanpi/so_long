@@ -74,3 +74,14 @@ Map handling
 * Manage the hooks so that the character can move with the W, A, S, D and ←, ↑, →, ↓ keys
 * Redo the map with each movement of the player, updating the player's position, and making the collectibles disappear if he retakes them
 * Manage the movement count (which should be displayed on the screen) and the count of collected collectibles
+
+
+
+<pre>
+111111111	⬛️⬛️⬛️⬛️⬛️⬛️⬛️⬛⬛️
+1P0100C01	⬛️🦖  ⬛️🍪     ⬛️
+100000001	⬛️            ⬛️
+10C000E01	⬛️  🍪     🚪  ⬛️
+100010001	⬛️    ⬛️      ⬛️
+111111111	⬛️⬛️⬛️⬛️⬛️⬛️⬛️⬛️⬛️
+</pre>
