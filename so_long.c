@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/so_long.h"
+#include "../include/so_long.h"
 
 static int	argv_checker(char *argv)
 {
@@ -28,10 +28,16 @@ static int	argv_checker(char *argv)
 	return (0);
 }
 
+void	ft_leaks(void)
+{
+	system("leaks -q so_long");
+}
+
 int	main(int argc, char **argv)
 {
 	t_game	game;
 
+	atexit(ft_leaks);
 	if (argc == 2)
 	{
 		game.map = read_map(argv[1]);

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/so_long.h"
+#include "../include/so_long.h"
 
 static int	is_rectangular(char **map)
 {
@@ -100,7 +100,7 @@ static int	is_validate(char **map)
 		{
 			if (map[i][j] != 'P' && map[i][j] != 'E' && map[i][j] != 'C'
 				&& map[i][j] != '0' && map[i][j] != '1')
-				return (ft_printf("Error, tiene algún elemento que no debería!\n"), 0);
+				return (ft_printf("Error, tiene algo de más!\n"), 0);
 			j++;
 		}
 		i++;

@@ -6,11 +6,11 @@
 /*   By: pausanch <pausanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 15:14:02 by pausanch          #+#    #+#             */
-/*   Updated: 2023/11/03 15:37:07 by pausanch         ###   ########.fr       */
+/*   Updated: 2023/11/15 12:43:19 by pausanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/so_long.h"
+#include "../include/so_long.h"
 
 static void	game_events(int keycode, t_game *game)
 {
@@ -43,7 +43,9 @@ static int	keypress(int keycode, t_game *game)
 	else if (!game->endgame)
 	{
 		game_events(keycode, game);
-		printf("Moves: %d\n", game->moves);
+		if (game->moves_ant != game->moves)
+			printf("Moves: %d\n", game->moves);
+		game->moves_ant = game->moves;
 	}
 	return (0);
 }

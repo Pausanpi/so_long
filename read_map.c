@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/so_long.h"
+#include "../include/so_long.h"
 
 char	**read_map(char *path)
 {

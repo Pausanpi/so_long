@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/so_long.h"
+#include "../include/so_long_bonus.h"
 
 static int	random1to5(void)
 {

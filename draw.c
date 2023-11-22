@@ -6,11 +6,11 @@
 /*   By: pausanch <pausanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 10:44:05 by pausanch          #+#    #+#             */
-/*   Updated: 2023/11/06 16:48:14 by pausanch         ###   ########.fr       */
+/*   Updated: 2023/11/15 12:43:12 by pausanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/so_long.h"
+#include "../include/so_long.h"
 
 void	img_draw(t_game *game, void *image, int x, int y)
 {
@@ -54,7 +54,7 @@ int	map_draw(t_game *game)
 			else if (game->map[y][x] == 'P')
 				player_draw(game, game->img_player, x, y);
 			else if (game->map[y][x] == 'C')
-				img_draw(game, game->img_colect, x, y);
+				img_draw(game, game->img_colect1, x, y);
 			else if (game->map[y][x] == 'E')
 				exit_draw(game, x, y);
 			x++;

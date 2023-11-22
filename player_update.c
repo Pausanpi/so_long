@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/so_long.h"
+#include "../include/so_long.h"
 
 static void	player_update_image(char key, t_game *game)
 {
@@ -40,6 +40,7 @@ void	player_w(t_game *game)
 		game->moves++;
 		game->endgame = 1;
 		map_draw(game);
+		exit_game(game);
 	}
 	else if (game->map[game->y_player][game->x_player] == '1'
 		|| game->map[game->y_player][game->x_player] == 'E')
@@ -67,6 +68,7 @@ void	player_s(t_game *game)
 		game->moves++;
 		game->endgame = 1;
 		map_draw(game);
+		exit_game(game);
 	}
 	else if (game->map[game->y_player][game->x_player] == '1'
 		|| game->map[game->y_player][game->x_player] == 'E')
@@ -94,6 +96,7 @@ void	player_a(t_game *game)
 		game->moves++;
 		game->endgame = 1;
 		map_draw(game);
+		exit_game(game);
 	}
 	else if (game->map[game->y_player][game->x_player] == '1'
 		|| game->map[game->y_player][game->x_player] == 'E')
@@ -121,6 +124,7 @@ void	player_d(t_game *game)
 		game->moves++;
 		game->endgame = 1;
 		map_draw(game);
+		exit_game(game);
 	}
 	else if (game->map[game->y_player][game->x_player] == '1'
 		|| game->map[game->y_player][game->x_player] == 'E')
