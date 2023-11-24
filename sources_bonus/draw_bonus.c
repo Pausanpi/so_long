@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   draw.c                                             :+:      :+:    :+:   */
+/*   draw_bonus.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pausanch <pausanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 10:44:05 by pausanch          #+#    #+#             */
-/*   Updated: 2023/11/15 12:43:12 by pausanch         ###   ########.fr       */
+/*   Updated: 2023/11/24 18:10:50 by pausanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/so_long.h"
+#include "../include/so_long_bonus.h"
 
 void	img_draw(t_game *game, void *image, int x, int y)
 {
@@ -48,7 +48,6 @@ int	map_draw(t_game *game)
 		{
 			if (game->map[y][x] == '1')
 				img_draw(game, game->img_wall, x, y);
-				//wall_texture(game, x, y);
 			else if (game->map[y][x] == '0')
 				img_draw(game, game->img_floor, x, y);
 			else if (game->map[y][x] == 'P')
@@ -61,5 +60,6 @@ int	map_draw(t_game *game)
 		}
 		y++;
 	}
+	display_moves(game);
 	return (0);
 }

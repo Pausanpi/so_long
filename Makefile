@@ -6,7 +6,7 @@
 #    By: pausanch <pausanch@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/20 11:11:47 by pausanch          #+#    #+#              #
-#    Updated: 2023/11/22 16:58:53 by pausanch         ###   ########.fr        #
+#    Updated: 2023/11/24 18:09:02 by pausanch         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,14 +18,14 @@ MLX_FLAGS = -Llibft -lft -LMLX -lmlx -framework OpenGL -framework AppKit
 
 
 SRC_DIR = sources/
-SRC	=	draw.c animation.c exit_game.c game.c init.c map_validate.c player_update.c read_map.c so_long.c
+SRC	=	draw.c exit_game.c game.c init.c map_validate.c player_update.c read_map.c so_long.c
 OBJ_DIR = sources/
 OBJS = $(addprefix $(OBJ_DIR), $(SRC:.c=.o))
 
 
 BONUS_NAME = bonus
 BONUS_SRC_DIR = sources_bonus/
-BONUS_SRC = draw_bonus.c animation_bonus.c exit_game_bonus.c game_bonus.c init_bonus.c map_validate_bonus.c player_update_bonus.c read_map_bonus.c so_long_bonus.c
+BONUS_SRC = moves_bonus.c draw_bonus.c animation_bonus.c exit_game_bonus.c game_bonus.c init_bonus.c map_validate_bonus.c player_update_bonus.c read_map_bonus.c so_long_bonus.c
 BONUS_OBJ_DIR = sources_bonus/
 BONUS_OBJ = $(addprefix $(BONUS_OBJ_DIR), $(BONUS_SRC:.c=.o))
 

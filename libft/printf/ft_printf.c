@@ -6,7 +6,7 @@
 /*   By: pausanch <pausanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 10:43:44 by pausanch          #+#    #+#             */
-/*   Updated: 2023/10/12 18:28:17 by pausanch         ###   ########.fr       */
+/*   Updated: 2023/11/06 11:55:23 by pausanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,19 +63,19 @@ int	ft_printf(char const *content, ...)
 	va_end(args);
 	return (pos);
 }
-
+/* 
 int	main(void)
 {
-	/* char *s = "hey!";
+	char *s = "hey!";
 	void *p = NULL;
-	int	d = -3; */
+	int	d = -3;
 	unsigned int x = 0x159;
-/* 	int i = -27;
+	int i = -27;
 	unsigned int u = 690;
-	char c = 'g'; */
+	char c = 'g';
 
 	x = 922;
 	printf("%i\n",printf("%x\n", x));
 	printf("%i\n",ft_printf("%x\n", x));
 	return (0);
-}
+} */

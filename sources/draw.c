@@ -6,7 +6,7 @@
 /*   By: pausanch <pausanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 10:44:05 by pausanch          #+#    #+#             */
-/*   Updated: 2023/11/15 12:43:12 by pausanch         ###   ########.fr       */
+/*   Updated: 2023/11/23 11:33:28 by pausanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,6 @@ int	map_draw(t_game *game)
 		{
 			if (game->map[y][x] == '1')
 				img_draw(game, game->img_wall, x, y);
-				//wall_texture(game, x, y);
 			else if (game->map[y][x] == '0')
 				img_draw(game, game->img_floor, x, y);
 			else if (game->map[y][x] == 'P')

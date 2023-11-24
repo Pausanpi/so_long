@@ -24,28 +24,6 @@ static void	img_init(t_game *game)
 			"animation/collectible1.xpm", &game->img_w, &game->img_h);
 	game->img_exit = mlx_xpm_file_to_image(game->mlx,
 			"Sprites/exit2.xpm", &game->img_w, &game->img_h);
-	game->img_ambar = mlx_xpm_file_to_image(game->mlx,
-			"Sprites/ambar.xpm", &game->img_w, &game->img_h);
-	game->img_caracola = mlx_xpm_file_to_image(game->mlx,
-			"Sprites/caracola.xpm", &game->img_w, &game->img_h);
-	game->img_crystal = mlx_xpm_file_to_image(game->mlx,
-			"Sprites/crystal.xpm", &game->img_w, &game->img_h);
-	game->img_thing = mlx_xpm_file_to_image(game->mlx,
-			"Sprites/thing.xpm", &game->img_w, &game->img_h);
-	game->img_thing2 = mlx_xpm_file_to_image(game->mlx,
-			"Sprites/thing2.xpm", &game->img_w, &game->img_h);
-	game->img_full = mlx_xpm_file_to_image(game->mlx,
-			"Sprites/thing.xpm", &game->img_w, &game->img_h);
-}
-
-static void	img_init2(t_game *game)
-{
-	game->img_colect2 = mlx_xpm_file_to_image(game->mlx,
-			"animation/collectible2.xpm", &game->img_w, &game->img_h);
-	game->img_colect3 = mlx_xpm_file_to_image(game->mlx,
-			"animation/collectible3.xpm", &game->img_w, &game->img_h);
-	game->img_colect4 = mlx_xpm_file_to_image(game->mlx,
-			"animation/collectible4.xpm", &game->img_w, &game->img_h);
 }
 
 static void	size_window_init(t_game *game)
@@ -70,6 +48,5 @@ void	game_init(t_game *game)
 	game->time = 0;
 	game->pos_colect = 1;
 	img_init(game);
-	img_init2(game);
 	map_draw(game);
 }

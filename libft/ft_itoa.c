@@ -6,7 +6,7 @@
 /*   By: pausanch <pausanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 16:30:07 by pausanch          #+#    #+#             */
-/*   Updated: 2023/10/05 19:18:50 by pausanch         ###   ########.fr       */
+/*   Updated: 2023/11/24 18:11:21 by pausanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,8 +53,8 @@ char	*ft_itoa(int n)
 	return (str);
 }
 
-int	main(void)
+/* int	main(void)
 {
 	printf("%s\n", ft_itoa(-2147483648));
 	return (0);
-}
+} */

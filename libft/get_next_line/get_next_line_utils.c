@@ -6,7 +6,7 @@
 /*   By: pausanch <pausanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 12:10:08 by pausanch          #+#    #+#             */
-/*   Updated: 2023/10/20 12:33:31 by pausanch         ###   ########.fr       */
+/*   Updated: 2023/11/06 11:46:45 by pausanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ bool	ft_nlsrch(char *str)
 	return (false);
 }
 
-size_t	ft_strlen(const char *s)
+size_t	gnl_strlen(const char *s)
 {
 	size_t	cont;
 
@@ -49,13 +49,13 @@ size_t	ft_strlen(const char *s)
 	return (cont);
 }
 
-char	*ft_strjoin(char *s1, char const *s2)
+char	*gnl_strjoin(char *s1, char const *s2)
 {
 	char	*str;
 	size_t	x;
 	size_t	y;
 
-	str = malloc(sizeof(char) * ((size_t)ft_strlen(s1) + ft_strlen(s2) + 1));
+	str = malloc(sizeof(char) * ((size_t)gnl_strlen(s1) + gnl_strlen(s2) + 1));
 	if (!str)
 		return (NULL);
 	x = 0;

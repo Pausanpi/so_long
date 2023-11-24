@@ -6,11 +6,12 @@
 /*   By: pausanch <pausanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 12:06:35 by pausanch          #+#    #+#             */
-/*   Updated: 2023/10/25 15:41:38 by pausanch         ###   ########.fr       */
+/*   Updated: 2023/11/06 11:46:00 by pausanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
+#include "../libft.h"
 
 static char	*ft_read(int fd, char *leftstr)
 {
@@ -27,7 +28,7 @@ static char	*ft_read(int fd, char *leftstr)
 		if (bytes < 0)
 			return (free(buffer), free(leftstr), NULL);
 		buffer[bytes] = 0;
-		leftstr = ft_strjoin(leftstr, buffer);
+		leftstr = gnl_strjoin(leftstr, buffer);
 		if (!leftstr)
 			return (free(buffer), free(leftstr), NULL);
 	}

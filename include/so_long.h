@@ -40,14 +40,8 @@ typedef struct s_game
 	void	*img_floor;
 	void	*img_wall;
 	void	*img_player;
-	void	*img_colect;
+	void	*img_colect1;
 	void	*img_exit;
-	void	*img_ambar;
-	void	*img_caracola;
-	void	*img_crystal;
-	void	*img_thing;
-	void	*img_thing2;
-	void	*img_full;
 	int		map_w;
 	int		map_h;
 	int		img_w;
@@ -58,12 +52,12 @@ typedef struct s_game
 	int		x_player;
 	int		y_player;
 	int		moves;
+	int		moves_ant;
 	int		endgame;
 	int		time;
 	int		pos_colect;
 }	t_game;
 
-int		animation(t_game *game);
 void	img_draw(t_game *game, void *image, int x, int y);
 int		map_draw(t_game *game);
 void	game_init(t_game *game);
@@ -76,6 +70,5 @@ void	player_a(t_game *game);
 void	player_d(t_game *game);
 int		exit_game(t_game *game);
 void	free_map(char **map);
-void	wall_texture(t_game *game, int x, int y);
 
 #endif
