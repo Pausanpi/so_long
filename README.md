@@ -76,7 +76,7 @@ Map handling
 * Manage the movement count (which should be displayed on the screen) and the count of collected collectibles
 
 
-
+<p align="center">
 <pre>
 111111111	┌────┬───────┐
 1P0100C01	│☺   │    ❀  │
@@ -85,3 +85,4 @@ Map handling
 100010001	│       │    │
 111111111	└───────┴────┘
 </pre>
+</p>
