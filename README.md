@@ -77,7 +77,7 @@ Map handling
 
 
 <p align="center">
-<pre>
+<pre align="center">
 111111111	┌────┬───────┐
 1P0100C01	│☺   │    ❀  │
 100000001	│            │
