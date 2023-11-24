@@ -12,7 +12,6 @@
 |  └─ ...
 ├─ maps/
 ├─ sources/
-|  └─ animation.c
 |  └─ draw.c
 |  └─ exit_game.c
 |  └─ game.c
@@ -28,6 +27,7 @@
 |  └─ game_bonus.c
 |  └─ init_bonus.c
 |  └─ map_validate_bonus.c
+|  └─ moves_bonus.c
 |  └─ player_update_bonus.c
 |  └─ read_map_bonus.c
 |  └─ so_long_bonus.c
