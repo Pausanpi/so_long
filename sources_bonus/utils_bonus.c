@@ -1,37 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   animation_bonus.c                                  :+:      :+:    :+:   */
+/*   utils_bonus.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pausanch <pausanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/08 10:51:31 by pausanch          #+#    #+#             */
-/*   Updated: 2023/11/29 14:56:02 by pausanch         ###   ########.fr       */
+/*   Created: 2023/11/24 18:06:53 by pausanch          #+#    #+#             */
+/*   Updated: 2023/11/29 13:19:55 by pausanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/so_long_bonus.h"
 
-int	animation(t_game *game)
+void	display_moves(t_game *game)
 {
-	if (game->time < 2999)
-	{
-		game->time++;
-		return (0);
-	}
-	game->time = 0;
-	if (game->pos_colect == 1)
-		game->img_colect = game->img_colect1;
-	else if (game->pos_colect == 2)
-		game->img_colect = game->img_colect2;
-	else if (game->pos_colect == 3)
-		game->img_colect = game->img_colect3;
-	else if (game->pos_colect == 4)
-	{
-		game->img_colect = game->img_colect4;
-		game->pos_colect = 0;
-	}
+	char	*str;
+
+	str = ft_itoa(game->moves);
+	mlx_string_put(game->mlx, game->win, 9, 20, 0x6BBBD0, str);
+	free(str);
+}
+
+void	extra_player_moves(t_game *game)
+{
+	game->moves++;
+	game->endgame = 1;
 	map_draw(game);
-	game->pos_colect++;
-	return (0);
+	exit_game(game);
+}
+
+void	dead_player(t_game *game)
+{
+	game->endgame = 1;
+	map_draw(game);
+	exit_game(game);
 }

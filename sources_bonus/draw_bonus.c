@@ -6,7 +6,7 @@
 /*   By: pausanch <pausanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 10:44:05 by pausanch          #+#    #+#             */
-/*   Updated: 2023/11/24 18:10:50 by pausanch         ###   ########.fr       */
+/*   Updated: 2023/11/29 14:57:02 by pausanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,22 @@ static void	exit_draw(t_game *game, int x, int y)
 	img_draw(game, game->img_exit, x, y);
 }
 
+static void	texture(t_game *game, int x, int y)
+{
+	if (game->map[y][x] == '1')
+		img_draw(game, game->img_wall, x, y);
+	else if (game->map[y][x] == '0')
+		img_draw(game, game->img_floor, x, y);
+	else if (game->map[y][x] == 'P')
+		player_draw(game, game->img_player, x, y);
+	else if (game->map[y][x] == 'C')
+		img_draw(game, game->img_colect, x, y);
+	else if (game->map[y][x] == 'E')
+		exit_draw(game, x, y);
+	else if (game->map[y][x] == 'X')
+		img_draw(game, game->img_enemie, x, y);
+}
+
 int	map_draw(t_game *game)
 {
 	int	y;
@@ -46,16 +62,7 @@ int	map_draw(t_game *game)
 		x = 0;
 		while (game->map[y][x])
 		{
-			if (game->map[y][x] == '1')
-				img_draw(game, game->img_wall, x, y);
-			else if (game->map[y][x] == '0')
-				img_draw(game, game->img_floor, x, y);
-			else if (game->map[y][x] == 'P')
-				player_draw(game, game->img_player, x, y);
-			else if (game->map[y][x] == 'C')
-				img_draw(game, game->img_colect1, x, y);
-			else if (game->map[y][x] == 'E')
-				exit_draw(game, x, y);
+			texture(game, x, y);
 			x++;
 		}
 		y++;

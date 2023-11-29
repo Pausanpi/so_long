@@ -99,7 +99,7 @@ static int	is_validate(char **map)
 		while (map[i][j] != '\0')
 		{
 			if (map[i][j] != 'P' && map[i][j] != 'E' && map[i][j] != 'C'
-				&& map[i][j] != '0' && map[i][j] != '1')
+				&& map[i][j] != '0' && map[i][j] != '1' && map[i][j] != 'X')
 				return (ft_printf("Error, tiene algo de más!\n"), 0);
 			j++;
 		}

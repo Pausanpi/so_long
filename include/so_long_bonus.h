@@ -6,7 +6,7 @@
 /*   By: pausanch <pausanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 12:12:05 by pausanch          #+#    #+#             */
-/*   Updated: 2023/11/24 18:09:10 by pausanch         ###   ########.fr       */
+/*   Updated: 2023/11/29 14:55:40 by pausanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,11 +40,13 @@ typedef struct s_game
 	void	*img_floor;
 	void	*img_wall;
 	void	*img_player;
+	void	*img_colect;
 	void	*img_colect1;
 	void	*img_colect2;
 	void	*img_colect3;
 	void	*img_colect4;
 	void	*img_exit;
+	void	*img_enemie;
 	int		map_w;
 	int		map_h;
 	int		img_w;
@@ -75,5 +77,7 @@ void	player_d(t_game *game);
 int		exit_game(t_game *game);
 void	free_map(char **map);
 void	display_moves(t_game *game);
+void	extra_player_moves(t_game *game);
+void	dead_player(t_game *game);
 
 #endif

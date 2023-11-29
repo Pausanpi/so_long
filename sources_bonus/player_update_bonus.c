@@ -37,14 +37,13 @@ void	player_w(t_game *game)
 	{
 		mlx_clear_window(game->mlx, game->win);
 		game->map[game->y_player + 1][game->x_player] = '0';
-		game->moves++;
-		game->endgame = 1;
-		map_draw(game);
-		exit_game(game);
+		extra_player_moves(game);
 	}
 	else if (game->map[game->y_player][game->x_player] == '1'
 		|| game->map[game->y_player][game->x_player] == 'E')
 		game->y_player += 1;
+	else if (game->map[game->y_player][game->x_player] == 'X')
+		dead_player(game);
 	else
 	{
 		mlx_clear_window(game->mlx, game->win);
@@ -65,14 +64,13 @@ void	player_s(t_game *game)
 	{
 		mlx_clear_window(game->mlx, game->win);
 		game->map[game->y_player - 1][game->x_player] = '0';
-		game->moves++;
-		game->endgame = 1;
-		map_draw(game);
-		exit_game(game);
+		extra_player_moves(game);
 	}
 	else if (game->map[game->y_player][game->x_player] == '1'
 		|| game->map[game->y_player][game->x_player] == 'E')
 		game->y_player -= 1;
+	else if (game->map[game->y_player][game->x_player] == 'X')
+		dead_player(game);
 	else
 	{
 		mlx_clear_window(game->mlx, game->win);
@@ -93,14 +91,13 @@ void	player_a(t_game *game)
 	{
 		mlx_clear_window(game->mlx, game->win);
 		game->map[game->y_player][game->x_player + 1] = '0';
-		game->moves++;
-		game->endgame = 1;
-		map_draw(game);
-		exit_game(game);
+		extra_player_moves(game);
 	}
 	else if (game->map[game->y_player][game->x_player] == '1'
 		|| game->map[game->y_player][game->x_player] == 'E')
 		game->x_player += 1;
+	else if (game->map[game->y_player][game->x_player] == 'X')
+		dead_player(game);
 	else
 	{
 		mlx_clear_window(game->mlx, game->win);
@@ -121,14 +118,13 @@ void	player_d(t_game *game)
 	{
 		mlx_clear_window(game->mlx, game->win);
 		game->map[game->y_player][game->x_player - 1] = '0';
-		game->moves++;
-		game->endgame = 1;
-		map_draw(game);
-		exit_game(game);
+		extra_player_moves(game);
 	}
 	else if (game->map[game->y_player][game->x_player] == '1'
 		|| game->map[game->y_player][game->x_player] == 'E')
 		game->x_player -= 1;
+	else if (game->map[game->y_player][game->x_player] == 'X')
+		dead_player(game);
 	else
 	{
 		mlx_clear_window(game->mlx, game->win);

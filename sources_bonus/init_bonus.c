@@ -30,6 +30,10 @@ static void	img_init(t_game *game)
 			"animation/collectible3.xpm", &game->img_w, &game->img_h);
 	game->img_colect4 = mlx_xpm_file_to_image(game->mlx,
 			"animation/collectible4.xpm", &game->img_w, &game->img_h);
+	game->img_enemie = mlx_xpm_file_to_image(game->mlx,
+			"Sprites/enemie.xpm", &game->img_w, &game->img_h);
+	game->img_colect = mlx_xpm_file_to_image(game->mlx,
+			"animation/collectible1.xpm", &game->img_w, &game->img_h);
 }
 
 static void	size_window_init(t_game *game)
