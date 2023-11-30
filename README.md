@@ -34,7 +34,7 @@
 └─ sprites/
 </pre>
 
-![gif](./gif/gif1.gif)
+![img](./gif/e1.png)
 
 # Proyect Structure
 
