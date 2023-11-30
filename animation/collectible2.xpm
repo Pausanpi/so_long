@@ -24,6 +24,9 @@ static char *c3b9f6fcfd094833efbcb57889c7bfd3tCigmpPq9FFT9fQp[] = {
 "                                ",
 "                                ",
 "                                ",
+"                                ",
+"                                ",
+"                                ",
 "               ...              ",
 "          ... XooO..            ",
 "         .oOXX++oooO.           ",
@@ -45,9 +48,6 @@ static char *c3b9f6fcfd094833efbcb57889c7bfd3tCigmpPq9FFT9fQp[] = {
 "         *++++@@*@@@-*          ",
 "          **+@@@*****           ",
 "            ****                ",
-"                                ",
-"                                ",
-"                                ",
 "                                ",
 "                                "
 };
