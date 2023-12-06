@@ -21,7 +21,7 @@ static void	img_init(t_game *game)
 	game->img_player = mlx_xpm_file_to_image(game->mlx,
 			"Sprites/character_down.xpm", &game->img_w, &game->img_h);
 	game->img_colect1 = mlx_xpm_file_to_image(game->mlx,
-			"animation/collectible1.xpm", &game->img_w, &game->img_h);
+			"Sprites/collectible.xpm", &game->img_w, &game->img_h);
 	game->img_exit = mlx_xpm_file_to_image(game->mlx,
 			"Sprites/exit2.xpm", &game->img_w, &game->img_h);
 }
@@ -45,8 +45,6 @@ void	game_init(t_game *game)
 	game->moves = 0;
 	game->moves_ant = -1;
 	game->endgame = 0;
-	game->time = 0;
-	game->pos_colect = 1;
 	img_init(game);
 	map_draw(game);
 }

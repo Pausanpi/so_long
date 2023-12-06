@@ -6,7 +6,7 @@
 /*   By: pausanch <pausanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 12:12:05 by pausanch          #+#    #+#             */
-/*   Updated: 2023/11/29 14:55:40 by pausanch         ###   ########.fr       */
+/*   Updated: 2023/11/30 15:58:20 by pausanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,10 @@ typedef struct s_game
 	void	*img_colect4;
 	void	*img_exit;
 	void	*img_enemie;
+	void	*img_enemie1;
+	void	*img_enemie2;
+	void	*img_enemie3;
+	void	*img_enemie4;
 	int		map_w;
 	int		map_h;
 	int		img_w;

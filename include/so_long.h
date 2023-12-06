@@ -54,8 +54,6 @@ typedef struct s_game
 	int		moves;
 	int		moves_ant;
 	int		endgame;
-	int		time;
-	int		pos_colect;
 }	t_game;
 
 void	img_draw(t_game *game, void *image, int x, int y);

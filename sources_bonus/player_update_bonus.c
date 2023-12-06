@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   player_update.c                                    :+:      :+:    :+:   */
+/*   player_update_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pausanch <pausanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 10:41:44 by pausanch          #+#    #+#             */
-/*   Updated: 2023/11/03 10:41:44 by pausanch         ###   ########.fr       */
+/*   Updated: 2023/11/30 12:33:55 by pausanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@ void	player_w(t_game *game)
 	{
 		mlx_clear_window(game->mlx, game->win);
 		game->map[game->y_player + 1][game->x_player] = '0';
+		game->moves++;
+		game->endgame = 1;
 		extra_player_moves(game);
 	}
 	else if (game->map[game->y_player][game->x_player] == '1'
@@ -64,6 +66,8 @@ void	player_s(t_game *game)
 	{
 		mlx_clear_window(game->mlx, game->win);
 		game->map[game->y_player - 1][game->x_player] = '0';
+		game->moves++;
+		game->endgame = 1;
 		extra_player_moves(game);
 	}
 	else if (game->map[game->y_player][game->x_player] == '1'
@@ -91,6 +95,8 @@ void	player_a(t_game *game)
 	{
 		mlx_clear_window(game->mlx, game->win);
 		game->map[game->y_player][game->x_player + 1] = '0';
+		game->moves++;
+		game->endgame = 1;
 		extra_player_moves(game);
 	}
 	else if (game->map[game->y_player][game->x_player] == '1'
@@ -118,6 +124,8 @@ void	player_d(t_game *game)
 	{
 		mlx_clear_window(game->mlx, game->win);
 		game->map[game->y_player][game->x_player - 1] = '0';
+		game->moves++;
+		game->endgame = 1;
 		extra_player_moves(game);
 	}
 	else if (game->map[game->y_player][game->x_player] == '1'

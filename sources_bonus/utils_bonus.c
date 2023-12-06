@@ -6,7 +6,7 @@
 /*   By: pausanch <pausanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 18:06:53 by pausanch          #+#    #+#             */
-/*   Updated: 2023/11/29 13:19:55 by pausanch         ###   ########.fr       */
+/*   Updated: 2023/11/30 13:05:18 by pausanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,12 @@ void	display_moves(t_game *game)
 	char	*str;
 
 	str = ft_itoa(game->moves);
-	mlx_string_put(game->mlx, game->win, 9, 20, 0x6BBBD0, str);
+	mlx_string_put(game->mlx, game->win, 9, 20, 0xFFFFFF, str);
 	free(str);
 }
 
 void	extra_player_moves(t_game *game)
 {
-	game->moves++;
-	game->endgame = 1;
 	map_draw(game);
 	exit_game(game);
 }

@@ -157,6 +157,10 @@ static char *d982e139891f45c5b12afdaaba972e1820S6Mrm0W49ibEdb[] = {
 "                                                                ",
 "                                                                ",
 "                                                                ",
+"                                                                ",
+"                                                                ",
+"                                                                ",
+"                                                                ",
 "        7 7 ]       @                             7 ] ] ] ^     ",
 "        ] k.k.R e 7 ;.] 7                     b ] l.z.z.%.@     ",
 "        j F h.h.h.) D g.<.z               s ] z.z.z.j.F @       ",
@@ -180,9 +184,5 @@ static char *d982e139891f45c5b12afdaaba972e1820S6Mrm0W49ibEdb[] = {
 "              @ i.i.f.a.9.9.9.9.9.9.9.9.q.i.f.N                 ",
 "                B s.f.f.i.9.9.9.9.9.9.9.i.f.Z                   ",
 "                  C Y d.f.i.i.i.i.i.i.i.Y y                     ",
-"                    7 u Y Y Y Y Y Y u %                         ",
-"                                                                ",
-"                                                                ",
-"                                                                ",
-"                                                                "
+"                    7 u Y Y Y Y Y Y u %                         "
 };
