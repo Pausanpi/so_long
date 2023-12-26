@@ -15,6 +15,8 @@ Para usarla en mac, al compilar nuestros archivos deberemos usar las siguientes 
 
 ### *mlx_init*
 `mlx_init();`
+
+
 Iniciliza una conexión con el servidor gráfico y crea una estructura de datos necesaria para el uso de miniLibX.
 
 Será nuestra primera función a utilizar. Se usa sobre un `void *` y devuelve la dirección donde la librería va a estar almacenando las cosas de nuestro mlx.
@@ -28,7 +30,6 @@ Crea una nueva ventana en la pantalla con un tamaño y posición específicos.
 Recibe: el puntero `mlx_ptr` de conexión con el servidor gráfico, que es el que hemos creado al llamar a init, los tamaños de los ejes x e y, y el título que tendrá la ventana. Devuelve un puntero a la dirección donde se encuentra la ventana a crear.
 
 ### *mlx_loop*
-
 `int mlx_loop(void *mlx_ptr);`
 
 Inicia el bucle principal de eventos, que permite que la ventana sea interactiva y responda a las acciones del usuario.
