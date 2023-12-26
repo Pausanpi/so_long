@@ -22,7 +22,6 @@ Iniciliza una conexión con el servidor gráfico y crea una estructura de datos 
 Será nuestra primera función a utilizar. Se usa sobre un `void *` y devuelve la dirección donde la librería va a estar almacenando las cosas de nuestro mlx.
 
 ### *mlx_new_window*
-
 `void *mlx_new_window(void *mlx_ptr, int size_x, int size_y, char *title);`
 
 Crea una nueva ventana en la pantalla con un tamaño y posición específicos.
@@ -37,6 +36,13 @@ Inicia el bucle principal de eventos, que permite que la ventana sea interactiva
 ## Funciones de manejo de imágenes
 
 ### *mlx_xpm_file_to_image*
+`void *mlx_xpm_file_to_image(void *mlx_ptr, char *filename, int *width, int *height);`
+
+Permite cargar una imagen en formato XPM desde un archivo y crear una estructura de imagen en memoria (XPM es un formato de imagen en texto plano que se utiliza comúnmente en aplicaciones gráficas). 
+
+Recibe el puntero `mlx_ptr`, una cadena de caracteres `filename` con la ruta y el nombre del archivo .xpm, y dos punteros a int donde se almacenarán las dimensiones de la imagen cargada.
+
+Una vez ha cargado la imagen en nuestra memoria, devuelve un puntero al área de memoria deonde la ha cargado.
 
 
 
