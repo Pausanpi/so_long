@@ -84,7 +84,42 @@ La función de control de eventos, a su vez, recibe un entero con el KEY CODE de
 
     ![Untitled](https://eastmanreference.com/img/complete-list-of-applescript-key-codes-t.png)
 
+### *mlx_hook*
 
+`int	mlx_hook(void *win_ptr, int event, int event_mask, int (*funct)(), void *param);`
+
+Es más general que la anterior, no sólo afecta a teclas. Por ejemplo, si queremos que el juego se cierre al pulsar el botón de cerrar la ventana, deberemos usar esta función.
+
+Recibe: 
+
+- El puntero a la ventana `win_ptr.`
+- Un entero `event` con el evento al que va a ir asociada la función de control. En el caso de cerrar la ventana, el evento es el 17.
+- Una máscara de eventos`event_mask` que filtrará los eventos que desencadenarán la ejecución de la función de control. Hay algunas constantes definidas en miniLibX, como `mlx_key_press_mask` (máscara para eventos de tecla presionada), `mlx_button_press_mask` (máscara para eventos de botón del ratón presionado), `mlx_expose_mask` (máscara para eventos de exposición de la ventana), etc. Si no queremos filtrar nada, pasaremos 0.
+- Un puntero a la función `funct` de control de eventos a ejecutar cuando ocurra el evento especificado.
+- Y el puntero a parámetro adicional `param`.
+
+### **mlx_loop_hook**
+
+`int mlx_loop_hook(void *mlx_ptr, int (*funct_ptr)(), void *param);`
+
+Permite ejecutar una función en cada iteración del bucle principal de eventos. Puede ser útil para controlar eventos de teclado continuos, como mantener presionada una tecla.
+
+Tiene también otras funciones para manejo de eventos del teclado y el ratón, y el manejo de colores e imágenes en formatos específicos.
+
+### *mlx_mouse_hook*
+
+`int funct_ptr(int button, int x, int y, void *param);`
+
+Asigna una función de control de eventos a una acción específica del ratón, como hacer clic o mover el cursor. Esta función se ejecutará cuando se produzca el evento correspondiente. Además de recibir un entero con el botón del ratón a clickar (`1` para el izquierdo, `2` para el central y `3` para el derecho) recibe las coordenadas donde se ha producido el click.
+
+## Funciones para el bonus
+
+### *mlx_string_put*
+
+`int mlx_string_put(void *mlx_ptr, void *win_ptr, int x, int y, int color, char *string);`
+
+Se utiliza para mostrar strings en la ventana creada con MinilibX.
+Recibe el puntero mlx y el puntero a la ventana, dos enteros con las coordenadas en las que se mostrará la string, otro entero con el color del texto en formato hexadecimal, y por último, la string a mostrar por pantalla.
 
 
 
