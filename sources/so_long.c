@@ -25,7 +25,7 @@ static int	argv_checker(char *argv)
 	if (argv[i] == 'r' && argv[i - 1] == 'e'
 		&& argv[i - 2] == 'b' && argv[i - 3] == '.')
 		return (1);
-	return (0);
+	return (ft_printf("Error nombre del mapa\n"), 0);
 }
 
 void	ft_leaks(void)
@@ -41,12 +41,16 @@ int	main(int argc, char **argv)
 	if (argc == 2)
 	{
 		game.map = read_map(argv[1]);
-		if (map_checker(&game) && argv_checker(argv[1]))
+		if (game.map == NULL)
+			return (1);
+		if (argv_checker(argv[1]) && map_checker(&game))
 		{
 			game_init(&game);
 			gameplay(&game);
 			mlx_loop(game.mlx);
 		}
+		else
+			return (free_map(game.map), 1);
 	}
 	else
 	{

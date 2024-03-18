@@ -6,7 +6,7 @@
 /*   By: pausanch <pausanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 10:44:05 by pausanch          #+#    #+#             */
-/*   Updated: 2023/11/23 11:33:28 by pausanch         ###   ########.fr       */
+/*   Updated: 2024/02/06 12:33:26 by pausanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ int	map_draw(t_game *game)
 			else if (game->map[y][x] == 'P')
 				player_draw(game, game->img_player, x, y);
 			else if (game->map[y][x] == 'C')
-				img_draw(game, game->img_colect1, x, y);
+				img_draw(game, game->img_colect, x, y);
 			else if (game->map[y][x] == 'E')
 				exit_draw(game, x, y);
 			x++;

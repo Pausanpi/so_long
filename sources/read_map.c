@@ -21,8 +21,8 @@ char	**read_map(char *path)
 	char	**map;
 
 	fd = open(path, O_RDONLY);
-	if (fd == -1)
-		return (NULL);
+	if (fd < 0)
+		return (ft_printf("Error abrir archivo\n"), NULL);
 	holder_map = ft_strdup("");
 	while (1)
 	{

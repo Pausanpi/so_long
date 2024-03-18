@@ -20,7 +20,7 @@ static void	img_init(t_game *game)
 			&game->img_w, &game->img_h);
 	game->img_player = mlx_xpm_file_to_image(game->mlx,
 			"Sprites/character_down.xpm", &game->img_w, &game->img_h);
-	game->img_colect1 = mlx_xpm_file_to_image(game->mlx,
+	game->img_colect = mlx_xpm_file_to_image(game->mlx,
 			"Sprites/collectible.xpm", &game->img_w, &game->img_h);
 	game->img_exit = mlx_xpm_file_to_image(game->mlx,
 			"Sprites/exit2.xpm", &game->img_w, &game->img_h);
