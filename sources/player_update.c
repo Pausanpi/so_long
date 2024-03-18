@@ -27,12 +27,13 @@ static void	player_update_image(char key, t_game *game)
 	else if (key == 'a')
 		game->img_player = mlx_xpm_file_to_image(game->mlx,
 				"Sprites/character_left.xpm", &game->img_w, &game->img_h);
+	
+	mlx_clear_window(game->mlx, game->win);
 }
 
 void	player_w(t_game *game)
 {
 	player_update_image('w', game);
-	mlx_clear_window(game->mlx, game->win);
 	if (game->map[game->y_player][game->x_player] == 'E'
 		&& game->n_colect == 0)
 	{
@@ -58,7 +59,6 @@ void	player_w(t_game *game)
 void	player_s(t_game *game)
 {
 	player_update_image('s', game);
-	mlx_clear_window(game->mlx, game->win);
 	if (game->map[game->y_player][game->x_player] == 'E'
 		&& game->n_colect == 0)
 	{
@@ -84,7 +84,6 @@ void	player_s(t_game *game)
 void	player_a(t_game *game)
 {
 	player_update_image('a', game);
-	mlx_clear_window(game->mlx, game->win);
 	if (game->map[game->y_player][game->x_player] == 'E'
 		&& game->n_colect == 0)
 	{
@@ -110,7 +109,6 @@ void	player_a(t_game *game)
 void	player_d(t_game *game)
 {
 	player_update_image('d', game);
-	mlx_clear_window(game->mlx, game->win);
 	if (game->map[game->y_player][game->x_player] == 'E'
 		&& game->n_colect == 0)
 	{
