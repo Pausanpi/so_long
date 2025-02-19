@@ -1,4 +1,4 @@
-# so_long  👾
+# <img src="https://media1.tenor.com/m/JwC1q_u8_oQAAAAC/hollow-knight.gif" width="50px"> So_long 
 <pre>
 .
 |
