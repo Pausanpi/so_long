@@ -1,8 +1,14 @@
 # <img src="https://media1.tenor.com/m/JwC1q_u8_oQAAAAC/hollow-knight.gif" width="50px"> So_long 
+
+This project is a small 2D game with the minilibx. You will learn about textures, sprites and tiles.
+
+<h3>Project Tree</h3>
 <pre>
 .
 |
 ├─ MLX/
+├─ Sprites/
+├─ animation/
 ├─ include/
 |  └─ so_long.h
 |  └─ so_long_bonus.h
@@ -31,9 +37,20 @@
 |  └─ player_update_bonus.c
 |  └─ read_map_bonus.c
 |  └─ so_long_bonus.c
-└─ sprites/
+└─ Makefile
 </pre>
 
+<h3>Language</h3>
+<img src="https://github.com/user-attachments/assets/44ad9e07-95a9-45e0-9f1b-e748e3360ec5" width="50px">
+
+<h3>Skills</h3>
+<ul>
+  <li>Imperative</li>
+  <li>Programming</li>
+  <li>Graphics</li>
+</ul>
+
+<br></br>
 ![img](./gif/e1.png)
 
 # Proyect Structure
